@@ -21,12 +21,24 @@ export default function App() {
             <li>
               <Link to="/users">Users</Link>
             </li>
+            <li>
+              <Link to="/music">Music</Link>
+            </li>
+            <li>
+              <Link to="/photos">Photos</Link>
+            </li>
           </ul>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
+          <Route path="/music">
+            <Music />
+          </Route>
+          <Route path="/photos">
+            <Photos />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
@@ -52,4 +64,10 @@ function About() {
 
 function Users() {
   return <h2>Users</h2>;
+}
+function Music() {
+  return <h2>Music</h2>;
+}
+function Photos() {
+  return <h2>Photos</h2>;
 }
