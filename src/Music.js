@@ -1,11 +1,11 @@
 import React from 'react'
 
-class Welcome extends React.Component {
+class Music extends React.Component {
     render() {
         return (
-            <h1>Im the Welcome component.</h1>
+            <audio controls src=""><h2>Music</h2></audio>
         )
     }
 }
 
-export default Welcome
+export default Music

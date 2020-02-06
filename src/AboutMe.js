@@ -1,11 +1,12 @@
 import React from 'react'
 
-class Footer extends React.Component {
+class AboutMe extends React.Component {
+    
     render() {
         return (
-            <footer>Im the Footer component.</footer>
+             <h2>About </h2>,
+             <p>Im coding, trying so hard, gonna get a job. yeah</p> 
         )
     }
 }
-
-export default Footer
+export default AboutMe

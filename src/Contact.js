@@ -1,11 +1,18 @@
 import React from 'react'
 
-class CoolComponent extends React.Component {
+class Contact extends React.Component {
     render() {
         return (
-            <h1>Im the CoolComponent component.</h1>
+            <div>
+             <h2>Contact</h2>,
+                <ul>
+                    <li>Phone: 911</li>
+                    <li>Address: Atlanta</li>
+                    <li>Email: coolhacker1@rocketmail.com</li>
+                </ul> 
+            </div>
         )
     }
 }
 
-export default CoolComponent
+export default Contact

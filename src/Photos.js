@@ -1,11 +1,14 @@
 import React from 'react'
 
-class Header extends React.Component {
+class Photos extends React.Component {
     render() {
         return (
-            <header>Im the header component.</header>
+            <div>
+                <h2>Photos</h2>
+                    <img src="public/logo192.png"></img>
+             </div>  
         )
     }
 }
 
-export default Header
+export default Photos
