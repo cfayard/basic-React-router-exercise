@@ -1,78 +1,55 @@
-import React from 'react';
-import './App.css';
-import Header from './Photos';
-import Footer from './AboutMe';
-import Article from './Blog';
-import CoolComponent from './Contact';
-import Welcome from './Music';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-//   Link
-// } from "react-router-dom";
-
-const linkNames = [
-  {
-    text: 'Home',
-    path: '/'
-  },
-  {
-    text: 'Blog',
-    path: '/blog'
-  },
-  {
-    text: 'Music',
-    path: '/music'
-  },
-  {
-    text: 'Photos',
-    path: '/photos'
-  },
-  {
-    text: 'Contact',
-    path: '/contact'
-  }
-];
-
-function App() {
-return (
+export default function App() {
+  return (
     <Router>
-      <Header title={websiteTitle} />
-      <Nav 
-        links={linkNames}
-      />
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <Switch>
-        
-        <Route path="/blog">
-          <Blog />
-        
-        </Route>
-        
-        <Route path="/music">
-          <Music />
-        </Route>
-        
-        <Route path="/photos">
-          <Photos />
-        
-          <Route path="/contact">
-          <Contact />
-        
-          <Route path="/aboutme">
-          <AboutMe />
-        
-        <Route path="/">
-          <Home />
-        
-        </Route>
-      </Switch>
-
-      <Footer />
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   );
 }
 
-export default App;
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Users() {
+  return <h2>Users</h2>;
+}
